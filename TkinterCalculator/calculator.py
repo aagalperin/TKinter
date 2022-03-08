@@ -3,16 +3,21 @@ from tkinter import *
 root = Tk()
 root.title("Calculator")
 
+# adding an icon
+root.iconbitmap('icon.ico')
+
+# creatig myy imput entry
 data_entry = Entry(root, width=35, borderwidth=5)
 data_entry.grid(row=0, column=0, columnspan=3, padx=10, pady=2)
 
-
+# creates the number that we want to add as an imput
 def button_click(number):
     current_data = data_entry.get()
     data_entry.delete(0, END)
     data_entry.insert(0, str(current_data) + str(number))
 
 
+#Deletes everything that is in the imput widget
 def button_clear():
     data_entry.delete(0, END)
 
